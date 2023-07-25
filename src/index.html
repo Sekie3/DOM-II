@@ -8,14 +8,24 @@
   <link href="https://fonts.googleapis.com/css?family=Bangers|Titillium+Web" rel="stylesheet">
   <title>Great Idea!</title>
 </head>
+<style>
+  #drop {
+  width: 300px;
+  height: 200px;
+  border: 2px dashed #ccc;
+}
 
+.highlight {
+  border-color: red;
+}
+</style>
 <body>
 
   <header class="main-navigation">
     <div class="container nav-container">
       <h1 class="logo-heading">Fun Bus</h1>
       <nav class="nav">
-        <a class="nav-link" href="#">Home</a>
+        <a class="nav-link" href="www.nftyarcade.io">Home</a>
         <a class="nav-link" href="#">About Us</a>
         <a class="nav-link" href="#">Blog</a>
         <a class="nav-link" href="#">Contact</a>
@@ -23,9 +33,22 @@
     </div>
   </header>
 
+  <h2>Contact Us</h2>
+  <form>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" rows="4" required></textarea>
+    
+    <button type="submit">Submit</button>
+  </form>
+
   <div class="container home">
     <header class="intro">
-      <img src="http://localhost:9000/img/fun-bus.jpg" alt="bus in the sand">
+      <div id="drag-container">
+        <img draggable="true" id="drag" src="http://localhost:9000/img/fun-bus.jpg" alt="bus in the sand">
+      </div>
       <h2>Welcome To Fun Bus!</h2>
       <p>Traveling expedition modern, clean webdesign blogger clean website theme website modern. Design pretty design,
         travelblogger adventure WordPress wanderlust theme blogger website expedition theme travelblogger. Adventure fun
@@ -38,6 +61,9 @@
           simple traveling fun WordPress wanderlust darn simple organized.</p>
         <p>Expedition colorful design simple excursion blogger blogger design WordPress design, design organized website
           theme.</p>
+        <div id="drop">
+          Drop here! 
+        </div>
       </div>
       <div class="img-content">
         <img src="http://localhost:9000/img/adventure.jpg" alt="Let's go on an adventure!">
